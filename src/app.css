@@ -1,0 +1,138 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+    font-family: "Baloo Bhaijaan 2";
+    src:
+        local("Baloo Bhaijaan 2 ExtraBold"),
+        local("BalooBhaijaan2-ExtraBold"),
+        url("fonts/BalooBhaijaan2/BalooBhaijaan2-ExtraBold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Baloo Bhaijaan 2";
+    src:
+        local("Baloo Bhaijaan 2 Bold"),
+        local("BalooBhaijaan2-Bold"),
+        url("fonts/BalooBhaijaan2/BalooBhaijaan2-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Baloo Bhaijaan 2";
+    src:
+        local("Baloo Bhaijaan 2 Medium"),
+        local("BalooBhaijaan2-Medium"),
+        url("fonts/BalooBhaijaan2/BalooBhaijaan2-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Baloo Bhaijaan 2";
+    src:
+        local("Baloo Bhaijaan 2 SemiBold"),
+        local("BalooBhaijaan2-SemiBold"),
+        url("fonts/BalooBhaijaan2/BalooBhaijaan2-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Baloo Bhaijaan 2";
+    src:
+        local("Baloo Bhaijaan 2 Regular"),
+        local("BalooBhaijaan2-Regular"),
+        url("fonts/BalooBhaijaan2/BalooBhaijaan2-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@layer base {
+    body {
+        background-image: radial-gradient(#dfdfdf 10%, transparent 10%),
+            radial-gradient(#dfdfdf 10%, transparent 10%);
+        background-position:
+            0px 0px,
+            8px 8px;
+        background-size: 16px 16px;
+
+        @apply bg-primary-light font-BalooBhaijaan2 text-primary-light dark:bg-primary-dark dark:text-primary-dark;
+    }
+
+    html.dark body {
+        background-image: radial-gradient(#0a0a0a 10%, transparent 10%),
+            radial-gradient(#0a0a0a 10%, transparent 10%);
+    }
+}
+
+@layer utilities {
+    .cover-screen {
+        @apply h-screen w-full;
+    }
+
+    .x-center,
+    .y-center {
+        @apply absolute;
+    }
+
+    .x-center {
+        @apply left-1/2 -translate-x-1/2;
+    }
+
+    .y-center {
+        @apply top-1/2 -translate-y-1/2;
+    }
+
+    .flex-center {
+        @apply flex items-center justify-center;
+    }
+
+    .aspect-square {
+        aspect-ratio: 1 / 1;
+    }
+
+    .text-light {
+        @apply text-primary-light-400 dark:text-primary-dark-300;
+    }
+
+    .text-dark {
+        @apply text-primary-light-800 dark:text-primary-dark-700;
+    }
+}
+
+@layer components {
+    button.primary,
+    a.primary,
+    button.secondary,
+    a.secondary {
+        @apply px-6 py-3 font-semibold;
+    }
+
+    button.primary,
+    a.primary {
+        @apply rounded-button;
+    }
+
+    .divider-x,
+    .divider-y {
+        @apply bg-divider-light dark:bg-divider-dark;
+    }
+
+    .divider-x {
+        height: 2px;
+    }
+
+    .divider-y {
+        width: 2px;
+    }
+}
