@@ -3,7 +3,7 @@ export type link = {
     url: string;
 };
 
-export const links: link[] = [
+export const basicLinks: link[] = [
     {
         text: "About",
         url: "/",
@@ -28,8 +28,8 @@ export const aboutLinks: link[] = [
         url: "/#features",
     },
     {
-        text: "Features",
-        url: "/#features",
+        text: "Marketplace",
+        url: "/app/marketplace",
     },
 ];
 
