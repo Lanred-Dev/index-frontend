@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { links, socialLinks } from "./navigationLinks";
+    import { basicLinks, socialLinks } from "./navigationLinks";
 </script>
 
 <header class="x-center top-0 z-10 flex w-full items-center justify-between p-10 md:px-[20%]">
@@ -11,7 +11,7 @@
             <a class="text-light select-none" href={url}>{text}</a>
         {/snippet}
 
-        {#each links as link}
+        {#each basicLinks as link}
             {@render navigationLink(link.text, link.url)}
         {/each}
 
