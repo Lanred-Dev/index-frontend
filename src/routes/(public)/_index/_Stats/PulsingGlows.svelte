@@ -1,18 +1,19 @@
 <script lang="ts">
     import { onMount } from "svelte";
     import easeOutQuint from "$lib/scripts/easings/easeOutQuint";
+    import easeInQuint from "$lib/scripts/easings/easeInQuint";
 
     // The amount of pulses to render and animate.
-    const PULSE_COUNT: number = 3;
+    const PULSE_COUNT: number = 1;
 
     // The width of the pulse stroke.
-    const LINE_WIDTH: number = 1;
+    const LINE_WIDTH: number = 2;
 
     // The radius of the pulses.
-    const PULSE_RADIUS: number = 15;
+    const PULSE_RADIUS: number = 20;
 
     // The speed, in seconds, that the pulses will last.
-    const PULSE_SPEED: number = 3;
+    const PULSE_SPEED: number = 2.5;
 
     // The amount of circles a pulse will have.
     const CIRCLE_COUNT: number = 3;
@@ -21,7 +22,7 @@
     const CIRCLE_SPEED: number = PULSE_SPEED / CIRCLE_COUNT;
 
     // The stagger key frames for each circle and when they will start relative to the pulse progress.
-    const STAGGER_KEY_FRAMES: number[] = [0, 0.2, 0.4];
+    const STAGGER_KEY_FRAMES: number[] = [0, 0.17, 0.29];
 
     // The FPS that the canvas will run at.
     const FPS: number = 144;
@@ -60,6 +61,8 @@
         render.lineWidth = LINE_WIDTH;
         render.strokeStyle = "#ecf0f1";
         render.globalAlpha = opacity;
+        render.shadowBlur = 25;
+        render.shadowColor = "#ecf0f1";
 
         render.beginPath();
         render.arc(x, y, radius, 0, 2 * Math.PI);
@@ -105,10 +108,10 @@
                     circle.radius = PULSE_RADIUS * easeOutQuint(circle.progress);
 
                     // Fade in first then fade out.
-                    if (circle.progress < 0.6) {
-                        circle.opacity = easeOutQuint(circle.progress / 0.6);
+                    if (circle.progress < 0.5) {
+                        circle.opacity = easeInQuint(circle.progress / 0.15);
                     } else {
-                        circle.opacity = 1 - easeOutQuint((circle.progress - 0.6) / 0.4);
+                        circle.opacity = 1 - easeInQuint((circle.progress - 0.5) / 0.5);
                     }
 
                     drawCircle(pulse.x, pulse.y, circle.radius, circle.opacity);
