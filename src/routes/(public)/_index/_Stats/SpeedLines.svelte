@@ -44,6 +44,8 @@
         render.lineWidth = LINE_WIDTH;
         render.strokeStyle = "#ecf0f1";
         render.globalAlpha = opacity;
+        render.shadowBlur = 10;
+        render.shadowColor = "#ecf0f1";
 
         render.beginPath();
         render.moveTo(x, y);
