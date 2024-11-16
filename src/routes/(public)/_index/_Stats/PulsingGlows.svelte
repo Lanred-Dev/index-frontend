@@ -13,7 +13,7 @@
     const PULSE_RADIUS: number = 20;
 
     // The speed, in seconds, that the pulses will last.
-    const PULSE_SPEED: number = 2.5;
+    const PULSE_SPEED: number = 3;
 
     // The amount of circles a pulse will have.
     const CIRCLE_COUNT: number = 3;
@@ -22,7 +22,7 @@
     const CIRCLE_SPEED: number = PULSE_SPEED / CIRCLE_COUNT;
 
     // The stagger key frames for each circle and when they will start relative to the pulse progress.
-    const STAGGER_KEY_FRAMES: number[] = [0, 0.17, 0.29];
+    const STAGGER_KEY_FRAMES: number[] = [0, 0.2, 0.4];
 
     // The FPS that the canvas will run at.
     const FPS: number = 144;
@@ -61,7 +61,7 @@
         render.lineWidth = LINE_WIDTH;
         render.strokeStyle = "#ecf0f1";
         render.globalAlpha = opacity;
-        render.shadowBlur = 25;
+        render.shadowBlur = 15;
         render.shadowColor = "#ecf0f1";
 
         render.beginPath();
