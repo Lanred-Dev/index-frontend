@@ -59,7 +59,7 @@
                 </div>
             {/snippet}
 
-            {@render list("What we offer", aboutLinks)}
+            {@render list("Product", aboutLinks)}
             {@render list("Support", supportLinks)}
             {@render list("Where to find us", socialLinks)}
         </div>
