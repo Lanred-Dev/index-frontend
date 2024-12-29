@@ -1,7 +1,6 @@
 <script lang="ts">
     import Hero from "./_index/Hero.svelte";
-    import Testimonials from "./_index/Testimonials.svelte";
-    import Pricing from "./_index/Pricing.svelte";
+    import Testimonials from "./_index/Testimonials/List.svelte";
     import CallToAction from "./_index/CallToAction.svelte";
 </script>
 
@@ -11,5 +10,4 @@
 
 <Hero />
 <Testimonials />
-<Pricing />
 <CallToAction />
