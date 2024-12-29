@@ -1,3 +1,5 @@
+// This file contains a list of all the links that are used for the header and footer navigation.
+
 export type link = {
     text: string;
     url: string;
