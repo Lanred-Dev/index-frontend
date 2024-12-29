@@ -2,17 +2,14 @@
     import type { Snippet } from "svelte";
     import { twMerge } from "tailwind-merge";
 
-    let {
-        action,
-        method = "GET",
-        classes,
-        children,
-    }: {
+    export type props = {
         action: string;
         method?: "POST" | "GET";
         classes?: string;
-        children: Snippet<[]>;
-    } = $props();
+        children?: Snippet<[]>;
+    };
+
+    let { action, method = "GET", classes, children }: props = $props();
 </script>
 
 <form class={twMerge("flex-center flex-col gap-5", classes)} {method} {action}>
