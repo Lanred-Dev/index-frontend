@@ -48,10 +48,8 @@ export default {
                 },
 
                 button: {
-                    dark: {
-                        primary: "#ff4747",
-                        secondary: "#fff837",
-                    },
+                    primary: "#F5DEB3",
+                    secondary: "#fff837",
                 },
 
                 divider: {
@@ -92,6 +90,44 @@ export default {
                         950: "#8C8C8C",
                     },
                 },
+            },
+
+            borderColor: {
+                primary: {
+                    light: {
+                        DEFAULT: "#F9F9F9",
+                        50: "#F9F9F9",
+                        100: "#F6F6F6",
+                        200: "#F1F1F1",
+                        300: "#ECECEC",
+                        400: "#E7E7E7",
+                        500: "#E2E2E2",
+                        600: "#DDDDDD",
+                        700: "#D8D8D8",
+                        800: "#D3D3D3",
+                        900: "#CECECE",
+                        950: "#CBCBCB",
+                    },
+
+                    dark: {
+                        DEFAULT: "#050505",
+                        50: "#1C1C1C",
+                        100: "#1B1B1B",
+                        200: "#181818",
+                        300: "#161616",
+                        400: "#131313",
+                        500: "#101010",
+                        600: "#0E0E0E",
+                        700: "#0B0B0B",
+                        800: "#090909",
+                        900: "#060606",
+                        950: "#050505",
+                    },
+                },
+            },
+
+            ringColor: {
+                primary: "#F5DEB3",
             },
 
             borderWidth: {

@@ -3,14 +3,13 @@
     import easeOutQuint from "$lib/scripts/easings/easeOutQuint";
     import easeInQuint from "$lib/scripts/easings/easeInQuint";
 
-    // The amount of pulses to render and animate.
-    const PULSE_COUNT: number = 1;
+    let { color, pulseCount = 5 }: { color: string; pulseCount?: number } = $props();
 
     // The width of the pulse stroke.
     const LINE_WIDTH: number = 2;
 
     // The radius of the pulses.
-    const PULSE_RADIUS: number = 20;
+    const PULSE_RADIUS: number = 15;
 
     // The speed, in seconds, that the pulses will last.
     const PULSE_SPEED: number = 3;
@@ -25,7 +24,7 @@
     const STAGGER_KEY_FRAMES: number[] = [0, 0.2, 0.4];
 
     // The FPS that the canvas will run at.
-    const FPS: number = 144;
+    const FPS: number = 45;
 
     let container: HTMLDivElement;
     let canvas: HTMLCanvasElement;
@@ -59,10 +58,10 @@
 
     function drawCircle(x: number, y: number, radius: number, opacity: number) {
         render.lineWidth = LINE_WIDTH;
-        render.strokeStyle = "#ecf0f1";
+        render.strokeStyle = color;
         render.globalAlpha = opacity;
         render.shadowBlur = 15;
-        render.shadowColor = "#ecf0f1";
+        render.shadowColor = color;
 
         render.beginPath();
         render.arc(x, y, radius, 0, 2 * Math.PI);
@@ -126,7 +125,7 @@
 
         pulses = [];
 
-        for (let index: number = 0; index < PULSE_COUNT; index++) {
+        for (let index: number = 0; index < pulseCount; index++) {
             pulses.push({
                 x: generateStartingX(),
                 y: generateStartingY(),
@@ -158,7 +157,7 @@
         }, 1000 / FPS);
 
         return () => {
-            // Stop updating the canvas size.
+            // Stop updating the canvas.
             window.removeEventListener("resize", resizeCanvas);
 
             // Stop animating the canvas.

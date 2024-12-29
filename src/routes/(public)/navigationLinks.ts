@@ -28,8 +28,12 @@ export const aboutLinks: link[] = [
         url: "/#features",
     },
     {
+        text: "Portfolios",
+        url: "/discover",
+    },
+    {
         text: "Marketplace",
-        url: "/app/marketplace",
+        url: "/marketplace",
     },
 ];
 
@@ -51,11 +55,6 @@ export const supportLinks: link[] = [
 export type socialLink = link & { icon: string };
 
 export const socialLinks: socialLink[] = [
-    {
-        text: "Roblox",
-        icon: "/icons/Roblox.svg",
-        url: "https://www.roblox.com/groups/6080291/Upbeat-Roblox#!/about",
-    },
     {
         text: "Github",
         icon: "/icons/Github.svg",

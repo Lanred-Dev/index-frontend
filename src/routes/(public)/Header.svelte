@@ -2,8 +2,8 @@
     import { basicLinks, socialLinks } from "./navigationLinks";
 </script>
 
-<header class="x-center top-0 z-10 flex w-full items-center justify-between p-10 md:px-[20%]">
-    <p class="text-3xl font-bold">Upbeat</p>
+<header class="x-center top-0 z-10 flex w-full items-center justify-between p-10 md:px-[10%]">
+    <p class="text-2xl font-bold">Index</p>
 
     <!--Navigation items-->
     <div class="flex-center gap-6">

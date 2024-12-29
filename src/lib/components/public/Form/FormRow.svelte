@@ -1,13 +1,9 @@
 <script lang="ts">
-    import Header from "./Header.svelte";
-    import Footer from "./Footer.svelte";
     import type { Snippet } from "svelte";
 
     let { children }: { children: Snippet<[]> } = $props();
 </script>
 
-<Header />
-
-{@render children?.()}
-
-<Footer />
+<div class="flex-center w-full justify-between gap-5">
+    {@render children?.()}
+</div>

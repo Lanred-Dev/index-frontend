@@ -2,6 +2,8 @@
     import { onMount } from "svelte";
     import easeInQuint from "$lib/scripts/easings/easeInQuint";
 
+    let { color }: { color: string } = $props();
+
     // The amount of lines to render and animate.
     const LINE_COUNT: number = 35;
 
@@ -12,7 +14,7 @@
     const LINE_SIZE: number = 25;
 
     // The FPS that the canvas will run at.
-    const FPS: number = 144;
+    const FPS: number = 100;
 
     let container: HTMLDivElement;
     let canvas: HTMLCanvasElement;
@@ -40,12 +42,12 @@
         return canvas.width * (0.05 + Math.random() * (1 - 2 * 0.05));
     }
 
-    function drawArrow(x: number, y: number, scale: number, opacity: number) {
+    function drawLine(x: number, y: number, scale: number, opacity: number) {
         render.lineWidth = LINE_WIDTH;
-        render.strokeStyle = "#ecf0f1";
+        render.strokeStyle = color;
         render.globalAlpha = opacity;
         render.shadowBlur = 10;
-        render.shadowColor = "#ecf0f1";
+        render.shadowColor = color;
 
         render.beginPath();
         render.moveTo(x, y);
@@ -85,7 +87,7 @@
                 }
             }
 
-            drawArrow(line.x, line.y, line.scale, line.opacity);
+            drawLine(line.x, line.y, line.scale, line.opacity);
         });
     }
 
@@ -126,7 +128,7 @@
         }, 1000 / FPS);
 
         return () => {
-            // Stop updating the canvas size.
+            // Stop updating the canvas.
             window.removeEventListener("resize", resizeCanvas);
 
             // Stop animating the canvas.

@@ -8,21 +8,21 @@
         type EasingGenerator,
         type AnimationOptions,
     } from "motion";
-    import getBrowserName from "$lib/scripts/utils/getBrowserName";
     import easeInOutCubic from "$lib/scripts/easings/easeInOutCubic";
 
-    let browserName: string = $state("Unknown");
-
     type cycleTerm = { text: string; color: string };
+
+    // The list of terms to cycle through.
     const CYCLE_TERMS: cycleTerm[] = [
         { text: "Beauty", color: "#FFB6C1" },
-        { text: "Fun", color: "#FFD700" },
+        { text: "Networking", color: "#FFD700" },
         { text: "Customization", color: "#87CEFA" },
-        { text: "Perfection", color: "#F5DEB3" },
+        { text: "Professionalism", color: "#F5DEB3" },
         { text: "Style", color: "#BA55D3" },
         { text: "Innovation", color: "#40E0D0" },
         { text: "Simplicity", color: "#AFEEEE" },
     ];
+
     let currentTermIndex: number = 0;
     let currentTerm: cycleTerm = $state(CYCLE_TERMS[currentTermIndex]);
 
@@ -91,8 +91,6 @@
     }
 
     onMount(() => {
-        browserName = getBrowserName();
-
         // Start cycling the terms.
         const cycleIntervalID: number = setInterval(cycle, 4500);
 
@@ -124,21 +122,21 @@
                 <span>is what you get</span>
             </span>
 
-            <span>with Upbeat.</span>
+            <span>with Index.</span>
         </h1>
 
         <p class="text-xl lg:max-w-4xl">
-            Take your Roblox experience to the next level with a powerful, fully customizable
-            browser extension! Enjoy a sleek UI, personalized themes, and enhanced performance, all
-            designed to make every session smoother and more fun.
+            Take your portfolio to the next level with Index, a powerful, fully customizable
+            platform! Showcase your work with stunning templates, shareable cards, and dynamic
+            stats—all designed to elevate your professional and creative presence effortlessly.
         </p>
 
         <div class="flex-center gap-8">
             <a
-                class="primary text-primary-light transition-colors duration-300"
+                class="primary border-opacity-0 text-primary-light transition-colors duration-300"
                 id="download-button"
                 href="/get-started"
-                style="background-color: {currentTerm.color};">Download for {browserName}</a
+                style="background-color: {currentTerm.color};">Create my portfolio</a
             >
             <a class="secondary" href="/get-started">Learn more</a>
         </div>

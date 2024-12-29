@@ -12,16 +12,19 @@
     <div class="flex w-full flex-col gap-16 md:flex-row md:gap-20 lg:gap-28">
         <div class="w-full flex-shrink-0 md:w-[35%]">
             <div>
-                <p class="text-3xl font-bold">Upbeat</p>
-                <p class="text-light">Copyright © 2024 Upbeat. All rights reserved.</p>
+                <p class="text-3xl font-bold">Index</p>
+                <p class="text-light">Copyright © 2024 Index. All rights reserved.</p>
             </div>
 
             <p class="text-dark mt-5 text-sm">
-                Upbeat is an independent product and is not affiliated with, endorsed by, or
-                associated with Roblox Corporation. All Roblox logos and trademarks are the property
-                of Roblox Corporation. Upbeat is designed to modify aspects of the Roblox website
-                only, without altering or interacting with any in-game features on the Roblox
-                platform.
+                Index is an independent product, not affiliated with, endorsed by, or associated
+                with any third-party platforms or organizations. All logos, trademarks, and
+                intellectual property mentioned are the property of their respective owners. Index
+                focuses on empowering creators by improving networking opportunities and providing
+                tools to showcase their work effectively. It offers customizable templates and
+                features to highlight achievements and creativity while remaining solely a tool for
+                personal and professional expression. Index does not interfere with, modify, or
+                interact with proprietary features or services of any platform.
             </p>
         </div>
 
