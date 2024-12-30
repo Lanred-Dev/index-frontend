@@ -27,6 +27,7 @@
             name="Sunrise"
             description="The ideal choice for growing portfolios."
             buttonText="Start your free trial"
+            link="/get-started?plan=sunrise&trial=true"
             color="#F1D4A3"
             price={3}
             perks={[
@@ -42,6 +43,7 @@
             name="Starlight"
             description="The best option for professionals."
             buttonText="Buy now"
+            link="/get-started?plan=starlight"
             color="#A4C4F3"
             price={5}
             perks={[

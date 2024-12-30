@@ -9,6 +9,7 @@
         color,
         perks,
         buttonText,
+        link = "/get-started",
     }: {
         name: string;
         description: string;
@@ -16,6 +17,7 @@
         color: string;
         perks: (string | string[])[];
         buttonText: string;
+        link?: string;
     } = $props();
 </script>
 
@@ -39,7 +41,7 @@
             <p class="text-light mt-2">{description}</p>
         </div>
 
-        <a class="primary w-full text-center" href="/get-started" style="background-color: {color};"
+        <a class="primary w-full text-center" href={link} style="background-color: {color};"
             >{buttonText}</a
         >
 
