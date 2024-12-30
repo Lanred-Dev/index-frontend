@@ -14,6 +14,6 @@
     </div>
 
     <div class="x-center y-center z-[-1] h-full w-full">
-        <SpeedLines color="#F5DEB3" />
+        <SpeedLines lineCount={15} color="#F5DEB3" />
     </div>
 </Section>
