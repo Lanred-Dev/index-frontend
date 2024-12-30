@@ -26,12 +26,9 @@
 >
     <div class="relative w-full">
         <div
-            class="w-full overflow-hidden px-4 lg:px-[10%] {showAll
+            class="w-full overflow-hidden px-4 lg:px-[13%] {showAll
                 ? ''
-                : 'max-h-[85vh] lg:max-h-[90vh]'}"
-            style={showAll
-                ? ""
-                : "-webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); -webkit-mask-repeat: no-repeat;-webkit-mask-position: 0% 15%;"}
+                : 'bt-cover max-h-[85vh] lg:max-h-[90vh]'}"
         >
             <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {#each Array(3) as _value, index}
