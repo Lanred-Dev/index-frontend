@@ -1,1 +1,1 @@
-export { default } from "./List.svelte";
+export { default } from "./Section.svelte";
