@@ -79,7 +79,7 @@
 
 @layer utilities {
     .border-light {
-        @apply border-primary-light-500 dark:border-primary-dark-400;
+        @apply border border-primary-light-500 dark:border-primary-dark-400;
     }
 
     .cover-screen {
@@ -126,7 +126,7 @@
 
     button.primary,
     a.primary {
-        @apply border-light bg-button-primary rounded-button border text-primary-light;
+        @apply border-light bg-button-primary rounded-button text-primary-light;
     }
 
     input.primary,
