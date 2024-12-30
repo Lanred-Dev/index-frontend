@@ -23,7 +23,7 @@ export const basicLinks: link[] = [
 export const aboutLinks: link[] = [
     {
         text: "About",
-        url: "/#about",
+        url: "/",
     },
     {
         text: "Features",
@@ -45,12 +45,12 @@ export const supportLinks: link[] = [
         url: "/contact",
     },
     {
-        text: "FAQs",
-        url: "/#faq",
-    },
-    {
         text: "Pricing",
         url: "/pricing",
+    },
+    {
+        text: "Frequently Asked Questions",
+        url: "/#faq",
     },
 ];
 
