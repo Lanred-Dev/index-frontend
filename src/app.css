@@ -135,6 +135,10 @@
         @apply border-light focus:ring-primary rounded-button bg-primary-light-800 text-primary-light placeholder:text-primary-light-800 focus:border-transparent focus:outline-none focus:ring-1 dark:bg-primary-dark-700 dark:text-primary-dark-300 dark:placeholder:text-primary-dark-700;
     }
 
+    div.primary {
+        @apply border-light overflow-hidden rounded-primary bg-primary-light-800 dark:bg-primary-dark-700;
+    }
+
     .divider-x,
     .divider-y {
         @apply bg-divider-light dark:bg-divider-dark;
@@ -146,5 +150,14 @@
 
     .divider-y {
         width: 2px;
+    }
+
+    .bt-cover {
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: 0% 15%;
+        mask-position: 0% 15%;
     }
 }
