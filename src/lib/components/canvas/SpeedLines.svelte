@@ -2,19 +2,19 @@
     import { onMount } from "svelte";
     import easeInQuint from "$lib/scripts/easings/easeInQuint";
 
-    let { color }: { color: string } = $props();
-
-    // The amount of lines to render and animate.
-    const LINE_COUNT: number = 35;
-
-    // The width of the line stroke.
-    const LINE_WIDTH: number = 0.5;
-
-    // The size of the line lines at a scale of 1.
-    const LINE_SIZE: number = 25;
-
-    // The FPS that the canvas will run at.
-    const FPS: number = 100;
+    let {
+        lineCount = 35,
+        lineWidth = 0.5,
+        lineSize = 25,
+        color,
+        fps = 100,
+    }: {
+        lineCount?: number;
+        lineWidth?: number;
+        lineSize?: number;
+        color: string;
+        fps?: number;
+    } = $props();
 
     let container: HTMLDivElement;
     let canvas: HTMLCanvasElement;
@@ -43,7 +43,7 @@
     }
 
     function drawLine(x: number, y: number, scale: number, opacity: number) {
-        render.lineWidth = LINE_WIDTH;
+        render.lineWidth = lineWidth;
         render.strokeStyle = color;
         render.globalAlpha = opacity;
         render.shadowBlur = 10;
@@ -51,7 +51,7 @@
 
         render.beginPath();
         render.moveTo(x, y);
-        render.lineTo(x, y + LINE_SIZE * scale);
+        render.lineTo(x, y + lineSize * scale);
         render.closePath();
         render.stroke();
 
@@ -97,7 +97,7 @@
 
         lines = [];
 
-        for (let index: number = 0; index < LINE_COUNT; index++) {
+        for (let index: number = 0; index < lineCount; index++) {
             const startingY: number = generateStartingY();
 
             lines.push({
@@ -125,7 +125,7 @@
         // Start animating the canvas.
         const animateIntervalID: number = setInterval(() => {
             requestAnimationFrame(animate);
-        }, 1000 / FPS);
+        }, 1000 / fps);
 
         return () => {
             // Stop updating the canvas.
