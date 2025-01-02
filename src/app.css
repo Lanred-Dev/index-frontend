@@ -61,8 +61,8 @@
     /* The background image is repeating polka dots. */
 
     body {
-        background-image: radial-gradient(#dfdfdf 10%, transparent 10%),
-            radial-gradient(#dfdfdf 10%, transparent 10%);
+        background-image: radial-gradient(#dfdfdf 11%, transparent 11%),
+            radial-gradient(#dfdfdf 11%, transparent 11%);
         background-position:
             0px 0px,
             8px 8px;
@@ -72,8 +72,8 @@
     }
 
     html.dark body {
-        background-image: radial-gradient(#0a0a0a 10%, transparent 10%),
-            radial-gradient(#0a0a0a 10%, transparent 10%);
+        background-image: radial-gradient(#0a0a0a 11%, transparent 11%),
+            radial-gradient(#0a0a0a 11%, transparent 11%);
     }
 }
 
@@ -103,10 +103,6 @@
         @apply flex items-center justify-center;
     }
 
-    .aspect-square {
-        aspect-ratio: 1 / 1;
-    }
-
     .text-light {
         @apply text-primary-light-400 dark:text-primary-dark-300;
     }
@@ -120,23 +116,48 @@
     button.primary,
     a.primary,
     button.secondary,
-    a.secondary {
+    a.secondary,
+    button.primary-dark,
+    a.primary-dark {
         @apply px-6 py-3 font-semibold;
+    }
+
+    button.primary:has(> img),
+    a.primary:has(> img),
+    button.secondary:has(> img),
+    a.secondary:has(> img),
+    button.primary-dark:has(> img),
+    a.primary-dark:has(> img) {
+        @apply flex-center gap-1.5;
+    }
+
+    button.primary img,
+    a.primary img,
+    button.secondary img,
+    a.secondary img,
+    button.primary-dark img,
+    a.primary-dark img {
+        @apply aspect-1 h-7 select-none;
     }
 
     button.primary,
     a.primary {
-        @apply border-light bg-button-primary rounded-button text-primary-light;
+        @apply border-light rounded-button bg-button-primary text-primary-light;
+    }
+
+    button.primary-dark,
+    a.primary-dark {
+        @apply border-light rounded-button bg-primary-light-800 text-primary-light dark:bg-primary-dark-700 dark:text-primary-dark;
     }
 
     input.primary,
     textarea.primary,
     select.primary {
-        @apply border-light focus:ring-primary rounded-button bg-primary-light-800 text-primary-light placeholder:text-primary-light-800 focus:border-transparent focus:outline-none focus:ring-1 dark:bg-primary-dark-700 dark:text-primary-dark-300 dark:placeholder:text-primary-dark-700;
+        @apply border-light rounded-button bg-primary-light-800 text-primary-light placeholder:text-primary-light-800 focus:border-transparent focus:outline-none focus:ring-1 focus:ring-primary dark:bg-primary-dark-700 dark:text-primary-dark-300 dark:placeholder:text-primary-dark-700;
     }
 
     div.primary {
-        @apply border-light overflow-hidden rounded-primary bg-primary-light-800 dark:bg-primary-dark-700;
+        @apply border-light overflow-hidden rounded-primary bg-primary-light-700 dark:bg-primary-dark-700;
     }
 
     .divider-x,

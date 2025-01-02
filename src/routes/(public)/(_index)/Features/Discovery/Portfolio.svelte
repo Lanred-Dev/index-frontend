@@ -20,7 +20,7 @@
             <img
                 src={avatar}
                 alt={name}
-                class="aspect-square h-10 flex-none rounded-full object-cover"
+                class="aspect-1 h-10 flex-none rounded-full object-cover"
                 loading="lazy"
                 decoding="async"
             />

@@ -8,9 +8,9 @@
     title="Discover Talent, Find Opportunities"
     text="Built for employers and job seekers alike, our platform bridges the gap between ambition and opportunity. With powerful search tools, employers can uncover top talent, and job seekers can find their perfect role. Discover your next hire or career move with ease!"
 >
-    <div class="flex-center w-full !items-start gap-8 px-4 lg:px-[25%]">
+    <div class="flex-center w-full !items-start gap-8 px-4 lg:px-[15%]">
         {#each portfolios as list, index}
-            <div class="w-full space-y-8 {index === 0 ? 'pt-8' : ''}">
+            <div class="w-full space-y-8 {index === 0 || index === 2 ? 'pt-10' : ''}">
                 {#each list as portfolio}
                     <Portfolio {...portfolio} />
                 {/each}

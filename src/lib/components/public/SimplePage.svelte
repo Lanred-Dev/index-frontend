@@ -7,5 +7,5 @@
 <PageSection
     {...sectionProps}
     classes="min-h-screen"
-    style={(sectionProps.style ?? "") + "padding-top: 30vh; justify-content: flex-start;"}
+    style={(sectionProps.style ?? "") + "padding-top: 25vh; justify-content: flex-start;"}
 />

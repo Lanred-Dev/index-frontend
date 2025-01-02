@@ -5,12 +5,12 @@
 </script>
 
 <li class="w-full text-left text-sm">
-    <div class="bg-primary-200 relative flex w-full flex-col rounded-md p-8">
+    <div class="primary relative flex w-full flex-col p-8">
         <div class="flex items-center space-x-4">
             <img
                 src={avatar}
                 alt={name}
-                class="aspect-square h-10 flex-none rounded-full object-cover"
+                class="aspect-1 h-10 flex-none rounded-full object-cover"
                 loading="lazy"
                 decoding="async"
             />

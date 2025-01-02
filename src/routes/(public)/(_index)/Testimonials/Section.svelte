@@ -14,7 +14,7 @@
         if (!showAll) {
             window.scrollTo({
                 top: scrollPositionBeforeShowAll,
-                behavior: "smooth",
+                behavior: "instant",
             });
         }
     });
@@ -26,9 +26,9 @@
 >
     <div class="relative w-full">
         <div
-            class="w-full overflow-hidden px-4 lg:px-[13%] {showAll
+            class="w-full overflow-hidden px-4 lg:px-[15%] {showAll
                 ? ''
-                : 'bt-cover max-h-[85vh] lg:max-h-[90vh]'}"
+                : 'bt-cover max-h-[50vh] lg:max-h-[60vh]'}"
         >
             <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {#each Array(3) as _value, index}
@@ -47,9 +47,11 @@
             </div>
         </div>
 
-        <div class="absolute z-[1] w-full {showAll ? 'top-full h-10' : 'bottom-0 h-1/4'}">
+        <div
+            class="z-[1] w-full {showAll ? 'flex-center relative mt-6' : 'absolute bottom-0 h-1/4'}"
+        >
             <button
-                class="primary x-center y-center"
+                class="primary {!showAll ? 'x-center y-center' : ''}"
                 onclick={() => {
                     if (!showAll) {
                         scrollPositionBeforeShowAll = window.scrollY;

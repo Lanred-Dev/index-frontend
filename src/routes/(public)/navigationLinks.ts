@@ -11,6 +11,14 @@ export const basicLinks: link[] = [
         url: "/",
     },
     {
+        text: "Blog",
+        url: "/blog",
+    },
+    {
+        text: "Changelog",
+        url: "/changelog",
+    },
+    {
         text: "Pricing",
         url: "/pricing",
     },
@@ -28,6 +36,10 @@ export const aboutLinks: link[] = [
     {
         text: "Features",
         url: "/#features",
+    },
+    {
+        text: "Blog",
+        url: "/blog",
     },
     {
         text: "Portfolios",
@@ -51,6 +63,10 @@ export const supportLinks: link[] = [
     {
         text: "Frequently Asked Questions",
         url: "/#faq",
+    },
+    {
+        text: "Changelog",
+        url: "/changelog",
     },
 ];
 

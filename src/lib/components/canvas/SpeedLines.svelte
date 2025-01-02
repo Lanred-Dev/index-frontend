@@ -6,12 +6,14 @@
         lineCount = 35,
         lineWidth = 0.5,
         lineSize = 25,
+        lineSpeed = 1,
         color,
         fps = 100,
     }: {
         lineCount?: number;
         lineWidth?: number;
         lineSize?: number;
+        lineSpeed?: number;
         color: string;
         fps?: number;
     } = $props();
@@ -107,7 +109,7 @@
 
                 opacity: 0,
                 scale: Math.random() * 1.5 + 1,
-                speed: Math.random() * 2 + 1,
+                speed: (Math.random() * 2 + 1) / lineSpeed,
 
                 progress: 0,
                 startTime: Date.now(),

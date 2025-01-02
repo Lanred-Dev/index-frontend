@@ -32,18 +32,22 @@
             class="grid w-full grid-cols-1 grid-rows-1 gap-10 md:flex-grow md:grid-cols-3 md:grid-rows-1"
         >
             {#snippet navigationLink(text: string, url: string)}
-                <a class="text-light select-none" href={url}>{text}</a>
+                <li>
+                    <a class="text-light select-none" href={url}>{text}</a>
+                </li>
             {/snippet}
 
             {#snippet navigationSocialLink(text: string, icon: string, url: string)}
-                <a class="text-light flex select-none items-center gap-1.5" href={url}>
-                    <img class="aspect-square h-5 dark:invert" src={icon} alt={url} />
-                    {text}
-                </a>
+                <li>
+                    <a class="text-light flex select-none items-center gap-1.5" href={url}>
+                        <img class="aspect-1 h-5 dark:invert" src={icon} alt={url} />
+                        {text}
+                    </a>
+                </li>
             {/snippet}
 
             {#snippet list(title: string, entries: link[] | socialLink[])}
-                <div class="flex flex-col gap-1.5 md:pt-2.5">
+                <ul class="space-y-1.5 md:pt-2.5">
                     <p class="text-dark mb-1 text-sm font-semibold">
                         {title}
                     </p>
@@ -59,7 +63,7 @@
                             {@render navigationLink(entry.text, entry.url)}
                         {/if}
                     {/each}
-                </div>
+                </ul>
             {/snippet}
 
             {@render list("Product", aboutLinks)}
@@ -67,8 +71,4 @@
             {@render list("Where to find us", socialLinks)}
         </div>
     </div>
-
-    <div class="divider-x w-full"></div>
-
-    <p class="text-dark">Developed as a hobby project by Landon Redmond</p>
 </footer>

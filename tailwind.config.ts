@@ -53,8 +53,8 @@ export default {
                 },
 
                 divider: {
-                    light: "#dfdfdf",
-                    dark: "#0a0a0a",
+                    light: "#E7E7E7",
+                    dark: "#131313",
                 },
             },
 

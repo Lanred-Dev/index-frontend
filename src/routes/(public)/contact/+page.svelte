@@ -4,7 +4,7 @@
 </script>
 
 <SimplePage
-    title="Reach out to us"
+    title="Reach out to us."
     text="Reach out to us with your questions, comments, suggestions, or concerns. We'll get back to you as soon as we can."
 >
     <ContactForm action="/api/contact" method="POST" classes="w-full md:w-1/2" />

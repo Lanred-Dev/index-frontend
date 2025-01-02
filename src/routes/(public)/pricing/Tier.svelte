@@ -9,7 +9,7 @@
         color,
         perks,
         buttonText,
-        link = "/get-started",
+        link = "/login",
     }: {
         name: string;
         description: string;

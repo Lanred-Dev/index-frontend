@@ -4,4 +4,4 @@
     let sectionProps: props = $props();
 </script>
 
-<PageSection {...sectionProps} style={(sectionProps.style ?? "") + "margin-top: 50vh;"} />
+<PageSection {...sectionProps} style={(sectionProps.style ?? "") + "margin-top: 70vh;"} />

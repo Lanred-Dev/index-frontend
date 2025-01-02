@@ -102,7 +102,7 @@
 </script>
 
 <div class="cover-screen text-center">
-    <div class="x-center y-center flex-center w-full flex-col gap-10">
+    <div class="x-center flex-center y-center w-full flex-col gap-10">
         <h1 class="flex flex-col text-4xl font-bold md:text-5xl lg:text-6xl">
             <span class="flex-center">
                 <span
@@ -134,11 +134,10 @@
         <div class="flex-center gap-8">
             <a
                 class="primary border-opacity-0 text-primary-light transition-colors duration-300"
-                id="download-button"
-                href="/get-started"
+                href="/login?redirect=/get-started"
                 style="background-color: {currentTerm.color};">Create my portfolio</a
             >
-            <a class="secondary" href="/get-started">Learn more</a>
+            <a class="secondary" href="/#features">Learn more</a>
         </div>
     </div>
 </div>

@@ -25,13 +25,13 @@
 </script>
 
 <div
-    class="flex-center relative w-full {horizontal
+    class="flex-center relative w-full space-y-8 {horizontal
         ? 'pr-5 sm:pr-10 lg:justify-between'
         : 'flex-col'} {classes}"
     {style}
 >
     <div
-        class="flex-center relative z-10 mb-10 flex-col gap-5 text-center {horizontal
+        class="flex-center relative z-10 flex-col gap-3 text-center {horizontal
             ? 'w-full lg:w-[50%] lg:!items-start lg:pl-[10%] lg:text-left 2xl:pl-[15%]'
             : ''}"
     >

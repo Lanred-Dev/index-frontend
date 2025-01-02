@@ -12,6 +12,6 @@
     let { action, method = "GET", classes, children }: props = $props();
 </script>
 
-<form class={twMerge("flex-center flex-col gap-5", classes)} {method} {action}>
+<form class={twMerge("space-y-5", classes)} {method} {action}>
     {@render children?.()}
 </form>
