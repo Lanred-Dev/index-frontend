@@ -28,7 +28,7 @@ export const basicLinks: link[] = [
     },
 ];
 
-export const aboutLinks: link[] = [
+export const productLinks: link[] = [
     {
         text: "About",
         url: "/",

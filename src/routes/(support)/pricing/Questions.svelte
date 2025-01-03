@@ -1,6 +1,6 @@
 <script lang="ts">
-    import PageSection from "$lib/components/public/PageSection.svelte";
-    import { ContactForm } from "$lib/components/public/Form";
+    import PageSection from "$lib/components/PageSection.svelte";
+    import { ContactForm } from "$lib/components/Form";
 </script>
 
 <PageSection

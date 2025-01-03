@@ -1,6 +1,6 @@
 <script lang="ts">
-    import SimplePage from "$lib/components/public/SimplePage.svelte";
-    import { ContactForm } from "$lib/components/public/Form";
+    import SimplePage from "$lib/components/SimplePage.svelte";
+    import { ContactForm } from "$lib/components/Form";
 </script>
 
 <SimplePage

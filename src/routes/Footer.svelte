@@ -1,6 +1,6 @@
 <script lang="ts">
     import {
-        aboutLinks,
+        productLinks,
         supportLinks,
         socialLinks,
         type link,
@@ -66,7 +66,7 @@
                 </ul>
             {/snippet}
 
-            {@render list("Product", aboutLinks)}
+            {@render list("Product", productLinks)}
             {@render list("Support", supportLinks)}
             {@render list("Where to find us", socialLinks)}
         </div>

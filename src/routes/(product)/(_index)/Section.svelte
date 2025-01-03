@@ -1,5 +1,5 @@
 <script lang="ts">
-    import PageSection, { type props } from "$lib/components/public/PageSection.svelte";
+    import PageSection, { type props } from "$lib/components/PageSection.svelte";
 
     let sectionProps: props = $props();
 </script>
